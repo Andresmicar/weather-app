@@ -1,0 +1,38 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card card-body">
+        <img width="180" alt="Weather Logo"
+        src="../assets/Weather_icons_grey.png" class="mx-auto">
+        <form (submit)= "submitLocation(zipCode)">
+          <div class="form-group">
+          <input type="text" class="form-control" placeholder="Zip Code" #zipCode>
+        </div>
+          <button class="btn btn-primary btn-block mt-2">
+            Get Weather
+          </button>
+
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf= "weather" class="card card-body">
+          <p>Name: {{weather.city.name}}</p>
+          <p>Date: {{weather.list[0].dt_txt}}</p>
+        <p>Temperature: {{weather.list[0].main.temp}} ºc</p>
+
+        <p>Date: {{weather.list[8].dt_txt}}</p>
+        <p>Temperature: {{weather.list[8].main.temp}} ºc</p>
+
+        <p>Date: {{weather.list[16].dt_txt}}</p>
+        <p>Temperature: {{weather.list[16].main.temp}} ºc</p>
+
+        <p>Date: {{weather.list[24].dt_txt}}</p>
+        <p>Temperature: {{weather.list[24].main.temp}} ºc</p>
+
+        <p>Date: {{weather.list[32].dt_txt}}</p>
+        <p>Temperature: {{weather.list[32].main.temp}} ºc</p>
+      </div>
+    </div>
+  </div>
+</div>
